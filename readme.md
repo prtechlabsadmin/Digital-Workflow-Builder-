@@ -107,6 +107,7 @@ The system scores every lead from 0 to 100 using a transparent, 7-factor rubric,
 ---
 
 ## 5. UI 
+<img width="931" height="310" alt="dig-workflow-1" src="https://github.com/user-attachments/assets/ffe39dc8-fe84-4e29-b75e-a10d82c64f32" />
 
 image 1,2,3,4,5
 
