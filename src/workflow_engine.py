@@ -511,8 +511,11 @@ def process_leads(leads: list[dict]) -> list[QualificationResult]:
 
     logger.info("Processing %d lead(s)...", len(leads))
     for index, raw_lead in enumerate(leads, start=1):
-        label = raw_lead.get("email") or raw_lead.get("name") or f"row {index}"
         try:
+            # CHANGED: label moved INSIDE the try (a non-dict row must be
+            # quarantined, not crash the batch).
+            label = raw_lead.get("email") or raw_lead.get("name") or f"row {index}"
+
             # 1) Validate --------------------------------------------------
             is_valid, reasons = validate_lead(raw_lead)
             if not is_valid:
@@ -553,9 +556,15 @@ def process_leads(leads: list[dict]) -> list[QualificationResult]:
             # Deliberate broad catch (README: "batch never crashes"): a
             # single unexpected row is quarantined with a full traceback
             # in the log instead of killing the whole run.
-            logger.exception("Unexpected error while processing %s", label)
+            # CHANGED: log by row index (label may not exist yet) and
+            # sanitize the stored lead so the audit trail never breaks.
+            logger.exception("Unexpected error while processing row %d", index)
             results.append(
-                QualificationResult(lead=raw_lead, status="SKIPPED", skip_reason=f"error: {exc}")
+                QualificationResult(
+                    lead=raw_lead if isinstance(raw_lead, dict) else {},
+                    status="SKIPPED",
+                    skip_reason=f"error: {exc}",
+                )
             )
 
     logger.info("Pipeline finished: %d result(s)", len(results))
