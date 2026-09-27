@@ -18,7 +18,7 @@ The system scores every lead from 0 to 100 using a transparent, 7-factor rubric,
 
 ## 2. Flow Chart / Architecture
 
-![Digital Workflow Builder Architecture]([https://www.google.com/search?q=sandbox:/mnt/data/Gemini_Generated_Image_d7bwned7bwned7bw.png](https://res.cloudinary.com/kyizqhwl/image/upload/f_auto,q_auto/watermark-removed-Gemini_Generated_Image_d7bwned7bwned7bw))
+https://res.cloudinary.com/kyizqhwl/image/upload/f_auto,q_auto/watermark-removed-Gemini_Generated_Image_d7bwned7bwned7bw
 
 ### Stage-by-Stage Breakdown
 
