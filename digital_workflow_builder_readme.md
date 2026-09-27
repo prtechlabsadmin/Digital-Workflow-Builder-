@@ -18,30 +18,7 @@ The system scores every lead from 0 to 100 using a transparent, 7-factor rubric,
 
 ## 2. Flow Chart / Architecture
 
-![Digital Workflow Builder Architecture](https://www.google.com/search?q=sandbox:/mnt/data/Gemini_Generated_Image_d7bwned7bwned7bw.png)
-
-```mermaid
-flowchart TD
-    A["Lead source: web form / CSV export"] --> B["Ingestion — load_leads + validate_lead"]
-    B -->|"invalid row"| X["Exception queue + WARNING log"]
-    B -->|"valid"| C["Processing — normalize_lead"]
-    C --> D["Duplicate check — is_duplicate"]
-    D -->|"duplicate"| X
-    D -->|"unique"| E["Scoring engine — score_lead: 7 factors, 0–100"]
-    E --> F{"classify_lead"}
-    F -->|"HOT 70–100"| G1["Routing — Senior AE, SLA 1h"]
-    F -->|"WARM 40–69"| G2["Routing — Account Exec, SLA 24h"]
-    F -->|"NURTURE 0–39"| G3["Routing — Marketing nurture"]
-    G1 --> H1["draft_first_touch_email — urgent"]
-    G1 --> H2["draft_internal_alert"]
-    G2 --> H3["draft_first_touch_email — standard"]
-    G3 --> H4["draft_nurture_email"]
-    H1 --> I["Audit trail CSV + structured logs"]
-    H2 --> I
-    H3 --> I
-    H4 --> I
-    I --> J["Run summary → stakeholder update report"]
-```
+![Digital Workflow Builder Architecture]([https://www.google.com/search?q=sandbox:/mnt/data/Gemini_Generated_Image_d7bwned7bwned7bw.png](https://res.cloudinary.com/kyizqhwl/image/upload/f_auto,q_auto/watermark-removed-Gemini_Generated_Image_d7bwned7bwned7bw))
 
 ### Stage-by-Stage Breakdown
 
@@ -130,14 +107,9 @@ flowchart TD
 
 ---
 
-## 5. Screenshots
+## 5. UI 
 
-| # | Screenshot | What it must show | Save as |
-|---|---|---|---|
-| 1 | Home page | App header, "Use sample data" + CSV upload widget, one-line workflow summary | `screenshots/01_home.png` |
-| 2 | Input / output demo | Scored lead table (score, tier, owner, SLA) + one expanded email draft | `screenshots/02_demo.png` |
-| 3 | Evaluation dashboard | Run summary with tier distribution chart + `pytest -v` pass output | `screenshots/03_eval.png` |
-| 4 | Error handling / trace logs | Exceptions tab + console log showing WARNING entries for skipped rows | `screenshots/04_errors.png` |
+image 1,2,3,4,5
 
 ---
 
