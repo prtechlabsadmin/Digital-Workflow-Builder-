@@ -108,8 +108,16 @@ The system scores every lead from 0 to 100 using a transparent, 7-factor rubric,
 
 ## 5. UI 
 <img width="931" height="310" alt="dig-workflow-1" src="https://github.com/user-attachments/assets/ffe39dc8-fe84-4e29-b75e-a10d82c64f32" />
+2. Results 
+
 <img width="622" height="309" alt="dig-workflow-2" src="https://github.com/user-attachments/assets/a25ab6ec-cbab-4b68-bda6-bc35e8ee9a55" />
+
+3. Email Drafts 
+
 <img width="763" height="398" alt="dig-workflow-3" src="https://github.com/user-attachments/assets/56cf161e-a80b-4704-8066-da6af9c9ed9b" />
+
+4. Audit trail
+
 <img width="754" height="341" alt="dig-workflow-4" src="https://github.com/user-attachments/assets/64ff4a2e-ae41-49d9-850a-088f0867ab61" />
 
 ---
