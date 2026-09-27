@@ -3,7 +3,6 @@
 > Automated, explainable lead scoring + routing + first-touch email drafting — so sales teams respond to their best leads in minutes, not hours.
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
-![Tests](https://img.shields.io/badge/tests-pytest-passing-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
 ---
