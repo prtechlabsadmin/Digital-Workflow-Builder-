@@ -241,8 +241,3 @@ pytest -v
 ruff check src app.py
 black --check .
 ```
-
-### 7.5 Deploy
-
-1. **Free hosted demo (Streamlit Community Cloud):** push to GitHub → [share.streamlit.io](https://share.streamlit.io) → connect the repo → set main file to `app.py` → share the public URL.
-2. **Production pattern (n8n / Make.com):** lead form webhook → HTTP/schedule trigger invokes the pipeline → audit CSV written to a shared drive → email drafts queued in a review step → approved drafts sent via an SMTP node. Sending stays human-approved by design.
