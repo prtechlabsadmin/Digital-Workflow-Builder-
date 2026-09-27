@@ -18,7 +18,7 @@ The system scores every lead from 0 to 100 using a transparent, 7-factor rubric,
 
 ## 2. Flow Chart / Architecture
 
-https://res.cloudinary.com/kyizqhwl/image/upload/f_auto,q_auto/watermark-removed-Gemini_Generated_Image_d7bwned7bwned7bw
+<img src="https://res.cloudinary.com/kyizqhwl/image/upload/f_auto,q_auto/watermark-removed-Gemini_Generated_Image_d7bwned7bwned7bw" alt="Architecture Diagram" width="100%" />
 
 ### Stage-by-Stage Breakdown
 
