@@ -1,0 +1,14 @@
+# Digital Workflow Builder — dependencies
+# Python 3.10+ required (see README §7.1).
+
+# ---- Runtime ---------------------------------------------------------------
+# The engine (src/workflow_engine.py, src/email_templates.py) is pure Python
+# standard library. Streamlit is the ONLY runtime dependency, used by the
+# demo interface (app.py).
+streamlit>=1.36,<2.0
+
+# ---- Development / QA ------------------------------------------------------
+# Test suite and linting (README §7.4). Not needed in production.
+pytest>=8.2,<9.0
+ruff>=0.5,<1.0
+black>=24.8,<26.0
